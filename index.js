@@ -4,7 +4,7 @@ const route = require("./routes/client/index_route");
 const app = express();
 const port = 3000;
 
-app.set("view", "./view");
+app.set("views", "./views");
 app.set("view engine", "pug");
 
 // app.get("/", (req, res) => {

@@ -1,9 +1,7 @@
-module.exports = (app) => {
-    app.get("/", (req, res) => {
-        res.render("client/page/home/index");
-    });
+const homeRoute = require("./home_route");
+const productRoute = require("./product_route");
 
-    app.get("/products", (req, res) => {
-        res.send("Trang danh sách sản phẩm");
-    });
-}
+module.exports = (app) => {
+    app.use("/", homeRoute);
+    app.use("/products", productRoute);
+};
